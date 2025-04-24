@@ -21,6 +21,6 @@ public class UserService {
     public boolean validateUser(String user_id, String password) {
         User user = userRepository.findByUserId(user_id);
         if (user == null) return false;
-        return user.getUserpw().equals(password); // 실무에선 평문 비밀번호는 ❌ (bcrypt 추천)
+        return user.getUserpw().equals(password); //
     }
 }
